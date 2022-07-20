@@ -35,6 +35,11 @@ public class InfiniteWaveSpawnner : MonoBehaviour
 
     void Update()
     {
+        if(PlayerStats.Lives >= 50000)
+        {
+            gameManager.WinLevel();
+            this.enabled = false;
+        }
         if (state == SpawnState.WAITING)
         {
             if (EnemyIsAlive() == false)

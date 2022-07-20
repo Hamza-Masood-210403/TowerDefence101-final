@@ -61,7 +61,7 @@ public class BossMovement : MonoBehaviour
 
 	void EndPath()
 	{
-		PlayerStats.Lives--;
+		PlayerStats.Lives=0;
 		WaveSpawner.EnemiesAlive--;
 		Destroy(gameObject);
 	}
