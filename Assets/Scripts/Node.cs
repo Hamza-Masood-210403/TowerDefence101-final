@@ -112,7 +112,7 @@ public class Node : MonoBehaviour {
 
 		//GameObject effect = (GameObject)Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
 		//Destroy(effect, 5f);
-
+		isUpgraded = false;
 		Destroy(turret);
 		turretBlueprint = null;
 	}

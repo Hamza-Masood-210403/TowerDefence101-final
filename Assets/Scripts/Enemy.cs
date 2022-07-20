@@ -51,7 +51,10 @@ public class Enemy : MonoBehaviour {
 
 		GameObject effect = (GameObject)Instantiate(deathEffect, transform.position, Quaternion.identity);
 		Destroy(effect, 5f);
-
+		if(gameObject.tag=="ultimate boss")
+        {
+			PlayerStats.Lives = 100000;
+		}
 		WaveSpawner.EnemiesAlive--;
 
 		Destroy(gameObject);
